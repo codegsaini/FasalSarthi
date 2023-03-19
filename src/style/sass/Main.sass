@@ -1,0 +1,128 @@
+@use "reset"
+@use "color"
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap')
+
+
+input:focus,
+textarea:focus,
+select:focus
+    outline: none !important
+
+#root
+  width: 100%
+.show-sidebar
+    display: flex !important
+
+.active
+  color: color.$primary !important
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+input,
+textarea,
+p,
+a,
+button,
+select,
+ul,
+li
+  float: left
+  font-family: "Nunito", sans-serif
+  box-sizing: border-box
+  font-weight: light
+  color: color.$black
+
+div,.icon
+  float: left
+  box-sizing: border-box
+.spinner-wrapper
+  margin: 10px
+  display: none
+.spinner 
+  display: inline-block
+  position: relative
+  width: 80px
+  height: 80px
+
+.spinner div
+  box-sizing: border-box
+  display: block
+  position: absolute
+  width: 45px
+  height: 45px
+  margin: 4px
+  border: 4px solid color.$primary
+  border-radius: 50%
+  animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+  border-color: color.$primary transparent transparent transparent
+
+.spinner div:nth-child(1) 
+  animation-delay: -0.45s
+
+.spinner div:nth-child(2) 
+  animation-delay: -0.3s
+
+.spinner div:nth-child(3) 
+  animation-delay: -0.15s
+
+@keyframes spinner 
+  0% 
+    transform: rotate(0deg)
+  
+  100% 
+    transform: rotate(360deg)
+
+.progressbar
+    display: none
+    border: 7px solid color.$primary
+    border-top: 7px solid color.$lightGrey
+    border-right: 7px solid color.$primary
+    border-bottom: 7px solid color.$primary
+    border-radius: 50%
+    width: 40px
+    height: 40px
+    animation: spin .7s linear infinite
+
+@keyframes spin 
+  0%
+    transform: rotate(0deg)
+  100%
+     transform: rotate(360deg)
+
+#website-container
+  width: 100%
+.component-container
+  width: 100%
+
+.input-field
+  width: 100%
+  margin-top: 10px
+  background: color.$white
+  .input-label
+    width: 100%
+    font-weight: bold
+    color: lighten(color.$dark10, 10)
+    padding: 0 0 0 10px
+  input, textarea
+    width: 100%
+    border: 1px solid lighten(color.$dark1, 60)
+    font-size: 18px
+    margin-top: 5px
+    border-radius: 5px
+    padding: 10px
+  .input-label:has(+ input:focus)
+    color: color.$primary
+.primary-divider
+    width: 100%
+    display: flex
+    justify-content: center
+    margin: 10px 0
+    .primary-divider-wrapper
+        width: 300px
+        height: 4px
+        background: linear-gradient(to right, #00000000, color.$primary, color.$secondary, color.$primary, #00000000)
