@@ -1,7 +1,7 @@
 const Layout = () => {
 	return (
 		<>
-			<p>hii</p>
+			<p>bye</p>
 		</>
 	);
 };
