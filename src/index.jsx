@@ -4,14 +4,23 @@ import "./style/css/Main.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import Home from "./components/Home";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import ManageFarm from "./components/ManageFarm";
 
 const root = ReactDOM.createRoot(document.getElementById("root-container"));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Layout />}></Route>
-			</Routes>
+			<Provider store={store}>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<Home />} />
+					</Route>
+					<Route path="manage-farm" element={<ManageFarm />} />
+				</Routes>
+			</Provider>
 		</BrowserRouter>
 	</React.StrictMode>
 );
