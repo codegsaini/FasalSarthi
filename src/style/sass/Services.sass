@@ -1,7 +1,6 @@
 @use "color"
 #service-container
     width: 100%
-    padding: 30px 0
     margin-bottom: 100px
     .section-label
         width: 100%
@@ -11,6 +10,30 @@
         font-weight: bold
         color: color.$dark9
         text-align: center
+    #service-upload-section
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 40px 0
+        background: color.$primary
+        row-gap: 10px
+        h3
+            font-size: 35px
+            font-family: "Roboto"
+            color: white
+            text-shadow: 1px 1px 1px #000000
+        p
+            font-size: 22px
+        button
+            align-self: center
+            border: 2px solid color.$primary
+            padding: 10px 20px
+            font-size: 20px
+            transition: .2s
+            border-radius: 40px
+            &:hover
+                box-shadow: 2px 2px 30px -5px color.$dark1
     #services-wrapper
         width: 100%
         display: flex
