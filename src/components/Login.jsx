@@ -108,6 +108,18 @@ const Login = () => {
 	/* RESPONSE ------------------*/
 	return (
 		<>
+			<div className="error-div" id="login-error-div">
+				<p className="error-message" id="login-error-message"></p>
+				<p
+					onClick={() => {
+						$("#login-error-div").hide();
+					}}
+					className="error-remove-button"
+					id="login-error-remove-button"
+				>
+					X
+				</p>
+			</div>
 			<div className="form-container">
 				<div className="form-wrapper">
 					<div className="auth-page-info-wrapper">
@@ -143,6 +155,14 @@ const Login = () => {
 								value={password}
 								onChange={onChange}
 							/>
+							<button
+								onClick={() => {
+									alert("wait! This feature is pending");
+								}}
+								id="forgot-password-button"
+							>
+								Forgot Password?
+							</button>
 						</div>
 						<input
 							onClick={onSubmit}

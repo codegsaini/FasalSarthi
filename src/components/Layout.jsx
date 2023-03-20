@@ -2,7 +2,20 @@ import { Link, Outlet } from "react-router-dom";
 import "../style/css/Layout.css";
 import Logo from "../img/crops.png";
 import AshokLogo from "../img/ashok_logo.png";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import $ from "jquery";
 const Layout = () => {
+	let { user } = useSelector((state) => state.auth);
+	useEffect(() => {
+		if (user) {
+			$("#login-button").hide();
+			$("#dashboard-button").show();
+		} else {
+			$("#login-button").show();
+			$("#dashboard-button").hide();
+		}
+	}, []);
 	return (
 		<div id="main-container">
 			<div id="header">
@@ -10,8 +23,15 @@ const Layout = () => {
 					<img src={Logo} alt="" srcset="" />
 				</div>
 				<nav>
-					<Link to="login" className="nav-link">
+					<Link id="login-button" to="login" className="nav-link">
 						Login Account
+					</Link>
+					<Link
+						id="dashboard-button"
+						to="manage-farm"
+						className="nav-link"
+					>
+						Dashboard
 					</Link>
 					<a>|</a>
 					<Link to="register" id="header-primary-action-button">
