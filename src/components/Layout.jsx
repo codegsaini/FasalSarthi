@@ -1,8 +1,4 @@
 const Layout = () => {
-	return (
-		<>
-			<p></p>
-		</>
-	);
+	return <div id=""></div>;
 };
 export default Layout;
