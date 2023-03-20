@@ -4,6 +4,7 @@ import "./style/css/Main.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import PassReset from "./components/PassReset";
 import Home from "./components/Home";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
@@ -19,6 +20,7 @@ root.render(
 						<Route index element={<Home />} />
 					</Route>
 					<Route path="manage-farm" element={<ManageFarm />} />
+          <Route path="pass-reset" element={<PassReset />} />
 				</Routes>
 			</Provider>
 		</BrowserRouter>
