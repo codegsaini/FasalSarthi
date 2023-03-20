@@ -1,0 +1,95 @@
+@use "color"
+#main-container
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    #header
+        width: 100%
+        height: 100px
+        box-shadow: 2px 2px 30px -5px #00000036
+        z-index: 99
+        display: flex
+        padding: 0 40px
+        #logo-container
+            display: flex
+            align-items: center
+            margin-right: 50px
+            img
+                width: 250px
+        nav
+            flex: 1
+            display: flex
+            align-items: center
+            justify-content: end
+            a
+                color: color.$black
+                font-size: 19px
+                margin: 0 16px 
+                position: relative
+                display: flex
+                align-items: center
+                img
+                    width: 20px
+
+            a::before 
+                content: ''
+                position: absolute
+                width: 100%
+                height: 4px
+                border-radius: 40px
+                background-color: color.$primary
+                bottom: -5px
+                left: 0
+                transform-origin: right
+                transform: scaleX(0)
+                transition: transform .3s ease-in-out
+            .nav-link:hover::before 
+                transform-origin: left
+                transform: scaleX(1)
+            #header-primary-action-button
+                background-color: color.$primary
+                padding: 10px 25px
+                border-radius: 40px
+                font-size: 20px
+                font-weight: bold
+                color: white
+                border: 2px solid #EFB03A
+                transition: .2s
+                margin-left: 20px
+                &:hover
+                    box-shadow: 2px 5px 30px -10px color.$primary
+    #nav-header
+        width: 100%
+        display: flex
+        background: linear-gradient(to right, #000, #000, #000, color.$primary)
+        column-gap: 30px
+        padding: 0 40px
+        #nav-header-link-container
+            display: flex
+            flex: 1
+            a
+                font-size: 20px
+                color: white
+                border-bottom: 5px solid transparent
+                display: flex
+                align-items: center
+                padding: 15px
+                &:hover
+                    border-bottom: 5px solid color.$primary
+                    background: linear-gradient(to top, #111111, transparent)
+        #nav-header-official-links-container
+            display: flex
+            #nav-ministry-link
+                font-weight: normal
+                display: flex
+                align-items: center
+                font-size: 20px
+                color: white
+                img
+                    width: 25px
+                    margin: 0 20px
+    #content-wrapper
+        width: 100%
+        flex: 1
+        overflow-y: auto
