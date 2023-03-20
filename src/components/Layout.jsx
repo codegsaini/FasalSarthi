@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "../style/css/Layout.css";
 import Logo from "../img/crops.png";
 import AshokLogo from "../img/ashok_logo.png";
@@ -10,21 +10,13 @@ const Layout = () => {
 					<img src={Logo} alt="" srcset="" />
 				</div>
 				<nav>
-					<a
-						className="nav-link"
-						href="https://agricoop.nic.in/#gsc.tab=0"
-						target={"_blank"}
-					>
+					<Link to="login" className="nav-link">
 						Login Account
-					</a>
+					</Link>
 					<a>|</a>
-					<a
-						id="header-primary-action-button"
-						href="https://agricoop.nic.in/en/Major#gsc.tab=0"
-						target={"_blank"}
-					>
+					<Link to="register" id="header-primary-action-button">
 						Register Now
-					</a>
+					</Link>
 				</nav>
 			</div>
 			<div id="nav-header">

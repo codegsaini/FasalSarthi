@@ -9,6 +9,8 @@ import Home from "./components/Home";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import ManageFarm from "./components/ManageFarm";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const root = ReactDOM.createRoot(document.getElementById("root-container"));
 root.render(
@@ -20,7 +22,9 @@ root.render(
 						<Route index element={<Home />} />
 					</Route>
 					<Route path="manage-farm" element={<ManageFarm />} />
-          <Route path="pass-reset" element={<PassReset />} />
+					<Route path="pass-reset" element={<PassReset />} />
+					<Route path="login" element={<Login />} />
+					<Route path="register" element={<Register />} />
 				</Routes>
 			</Provider>
 		</BrowserRouter>
