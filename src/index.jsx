@@ -4,6 +4,7 @@ import "./style/css/Main.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import PassReset from "./components/PassReset";
 
 const root = ReactDOM.createRoot(document.getElementById("root-container"));
 root.render(
@@ -11,6 +12,7 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Layout />}></Route>
+				<Route path="pass-reset" element={<PassReset />} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>
