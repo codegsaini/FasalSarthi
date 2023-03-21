@@ -11,6 +11,7 @@ import { store } from "./app/store";
 import ManageFarm from "./components/ManageFarm";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import UploadService from "./components/UploadService";
 
 const root = ReactDOM.createRoot(document.getElementById("root-container"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
 					<Route path="pass-reset" element={<PassReset />} />
 					<Route path="login" element={<Login />} />
 					<Route path="register" element={<Register />} />
+					<Route path="submit-service" element={<UploadService />} />
 				</Routes>
 			</Provider>
 		</BrowserRouter>

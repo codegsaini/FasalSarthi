@@ -2,7 +2,9 @@ import "../style/css/Home.css";
 import Services from "./Services";
 import Farmer from "../img/kkkk.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Home = () => {
+	let { user } = useSelector((state) => state.auth);
 	return (
 		<div id="home-container">
 			<div id="rates-header">
@@ -113,15 +115,28 @@ const Home = () => {
 						<img src={Farmer} alt="" />
 					</div>
 				</a>
-				<Link to={"manage-farm"} className="header-button">
-					<div>
-						<p>खेती बाड़ी की देख रेख</p>
-						<p>Manage Farm</p>
-					</div>
-					<div>
-						<img src={Farmer} alt="" />
-					</div>
-				</Link>
+				{user && (
+					<Link to={"manage-farm"} className="header-button">
+						<div>
+							<p>खेती बाड़ी की देख रेख</p>
+							<p>Manage Farm</p>
+						</div>
+						<div>
+							<img src={Farmer} alt="" />
+						</div>
+					</Link>
+				)}
+				{!user && (
+					<Link to={"login"} className="header-button">
+						<div>
+							<p>खेती बाड़ी की देख रेख</p>
+							<p>Manage Farm</p>
+						</div>
+						<div>
+							<img src={Farmer} alt="" />
+						</div>
+					</Link>
+				)}
 			</div>
 			<Services />
 		</div>

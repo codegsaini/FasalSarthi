@@ -107,7 +107,7 @@ const Register = () => {
 		} else {
 			hideProgressbar(".submitProgressBar", ".submit-button");
 		}
-		if (isSuccess || user) {
+		if (isSuccess) {
 			navigate("/");
 		}
 		dispatch(reset());

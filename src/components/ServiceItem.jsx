@@ -1,11 +1,11 @@
 import "../style/css/ServiceItem.css";
 import Icon from "../img/tractor.png";
-const ServiceItem = () => {
+const ServiceItem = ({ title, price }) => {
 	return (
 		<div className="service-item">
 			<img src={Icon} alt="" />
-			<h2>Example of service name</h2>
-			<p id="service-price">₹999</p>
+			<h2>{title}</h2>
+			<p id="service-price">₹{price}</p>
 			<p>4.3 rating | 443 reviews</p>
 		</div>
 	);
