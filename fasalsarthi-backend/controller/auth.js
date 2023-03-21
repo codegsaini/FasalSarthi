@@ -200,7 +200,7 @@ export const getOTP = async (req, res, next) => {
 				color: #000000;
 			}
 			#footer {
-				background: #eec222;
+				background: #5fad49;
 				font-size: 16px;
 				text-align: center;
 				padding: 50px;
@@ -221,10 +221,10 @@ export const getOTP = async (req, res, next) => {
 		</style>
 	</head>
 	<body>
-		<h1>Engineer Notes.</h1>
+		<h1>फसल सारथि</h1>
 		<div id="border"></div>
 		<p id="header">Verify your email to finish your registration</p>
-		<p>Hi {{username}}, <br />Thank you for choosing Engineer Notes.</p>
+		<p>Hi {{username}}, <br />फसल सारथि से जुड़ने के लिए धन्यवाद</p>
 		<p>
 			Please enter below One Time Password in the window where you started
 			creating your account. This OTP is only valid for 5 minutes.
@@ -234,12 +234,12 @@ export const getOTP = async (req, res, next) => {
 		</p>
 		<p id="otp">{{otp}}</p>
 		<p id="note">
-			If you didn't create an account in Notebase, please ignore this
+			If you didn't create an account in Fasal Sarthi, please ignore this
 			message.
 		</p>
 		<p id="footer">
 			You have received this message because someone have signed up for
-			Engineer Notes using this email address. <br />If this was not you, ignore this message.
+			फसल सारथि using this email address. <br />If this was not you, ignore this message.
 		</p>
 	</body>
 </html>
@@ -261,8 +261,8 @@ export const getOTP = async (req, res, next) => {
 		transporter.sendMail(
 			{
 				from: {
-					name: "EngineerNotes",
-					address: "no-reply@engineernotes.in",
+					name: "Fasal Sarthi",
+					address: "no-reply@fasalsarthi.web.app",
 				},
 				to: email,
 				subject: "Email verification",

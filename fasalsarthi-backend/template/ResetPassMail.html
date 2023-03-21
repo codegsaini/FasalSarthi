@@ -1,137 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Verify your email address</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Verify your email address</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		body {
-			padding: 50px;
-		}
-
-		h1 {
-			width: 100%;
-			font-family: "DM Serif Display", serif;
-			font-size: 35px;
-			padding: 10px 0;
-			float: left;
-
-		}
-
-		p {
-			width: 100%;
-			font-family: "Roboto", sans-serif;
-			font-weight: 400;
-			padding: 20px 0;
-			font-size: 20px;
-			float: left;
-
-		}
-
-		#border {
-			width: 100%;
-			height: 2px;
-			background: #e7e7e7;
-			float: left;
-
-		}
-
-		#header {
-			font-size: 35px;
-			font-family: "Roboto", sans-serif;
-			font-weight: 100;
-			padding: 20px 0;
-			float: left;
-
-		}
-
-		#note {
-			font-size: 17px;
-			color: #000000;
-			float: left;
-
-		}
-
-		a {
-			float: left;
-		}
-
-		#footer {
-			background: #eec222;
-			font-size: 16px;
-			text-align: center;
-			padding: 50px;
-		}
-
-		#button {
-			text-decoration: none;
-			padding: 7px 20px;
-			border-radius: 20px;
-			background: #eec222;
-			font-family: "Roboto", sans-serif;
-			font-size: 20px;
-			color: #000;
-			margin: 20px 0;
-			float: left;
-		}
-
-		@media only screen and (max-width: 768px) {
 			body {
-				padding: 20px;
+				padding: 50px;
 			}
 
 			h1 {
+				width: 100%;
+				font-family: "DM Serif Display", serif;
 				font-size: 35px;
+				padding: 10px 0;
+				float: left;
+			}
+
+			p {
+				width: 100%;
+				font-family: "Roboto", sans-serif;
+				font-weight: 400;
+				padding: 20px 0;
+				font-size: 20px;
+				float: left;
+			}
+
+			#border {
+				width: 100%;
+				height: 2px;
+				background: #e7e7e7;
+				float: left;
 			}
 
 			#header {
 				font-size: 35px;
+				font-family: "Roboto", sans-serif;
 				font-weight: 100;
 				padding: 20px 0;
+				float: left;
 			}
 
+			#note {
+				font-size: 17px;
+				color: #000000;
+				float: left;
+			}
 
-		}
-	</style>
-</head>
+			a {
+				float: left;
+			}
 
-<body>
-	<h1>EngineerNotes.</h1>
-	<div id="border"></div>
-	<p id="header">Click on the link to reset your password</p>
-	<p>You have received this mail because someone have requested to change password associated with this email address
-		on the account present on EngineerNotes</p>
-	<p>
-		To reset your password please click on the below link. This link is only valid for 5 minutes.
-	</p>
+			#footer {
+				background: #eec222;
+				font-size: 16px;
+				text-align: center;
+				padding: 50px;
+			}
 
-	<a id="button" href="https://engineernotes.in/newpass?token={{token}}">Reset Password</a>
-	<br>
-	<p>
-		If this button does not working you can copy and paste below link in browser.
-	</p>
-	<a style="width: 100%;"
-		href="https://engineernotes.in/newpass?token={{token}}">https://engineernotes.in/newpass?token={{token}}</a>
-	<p id="note">
-		If you have not requested resetting your password of EngineerNotes, please ignore this
-		message.
-	</p>
-	<p id="footer">
-		You have received this message because you have an account associated with this email address on
-		EngineerNotes.in
-	</p>
-</body>
+			#button {
+				text-decoration: none;
+				padding: 7px 20px;
+				border-radius: 20px;
+				background: #eec222;
+				font-family: "Roboto", sans-serif;
+				font-size: 20px;
+				color: #000;
+				margin: 20px 0;
+				float: left;
+			}
 
+			@media only screen and (max-width: 768px) {
+				body {
+					padding: 20px;
+				}
+
+				h1 {
+					font-size: 35px;
+				}
+
+				#header {
+					font-size: 35px;
+					font-weight: 100;
+					padding: 20px 0;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>फसल सारथि</h1>
+		<div id="border"></div>
+		<p id="header">Click on the link to reset your password</p>
+		<p>
+			You have received this mail because someone have requested to change
+			password associated with this email address on the account present
+			on EngineerNotes
+		</p>
+		<p>
+			To reset your password please click on the below link. This link is
+			only valid for 5 minutes.
+		</p>
+
+		<a id="button" href="https://engineernotes.in/newpass?token={{token}}"
+			>Reset Password</a
+		>
+		<br />
+		<p>
+			If this button does not working you can copy and paste below link in
+			browser.
+		</p>
+		<a
+			style="width: 100%"
+			href="https://engineernotes.in/newpass?token={{token}}"
+			>https://engineernotes.in/newpass?token={{token}}</a
+		>
+		<p id="note">
+			If you have not requested resetting your password of EngineerNotes,
+			please ignore this message.
+		</p>
+		<p id="footer">
+			You have received this message because you have an account
+			associated with this email address on EngineerNotes.in
+		</p>
+	</body>
 </html>
