@@ -1,10 +1,10 @@
 @use "color"
 #manage-farm-container
-    width: 100vw
-    height: 100vh
+    width: 100%
+    display: flex
     #admin-sidebar
         width: 20%
-        height: 100vw
+        height: 100vh
         display: flex
         background: #F7F2EF
         flex-direction: column
@@ -33,3 +33,90 @@
                 font-weight: bold
                 border-radius: 40px
                 color: color.$primary
+    .section-label
+        border-left: 5px solid color.$primary
+        font-weight: bold
+        margin: 30px 0 0 0
+        font-size: 20px
+        color: color.$dark9
+        padding: 0 20px
+    #dashboard-content
+        flex: 1
+        #left,#right
+            width: 50%
+        #left
+            display: flex
+            flex-direction: column
+            padding: 50px
+            h2
+                padding: 0 100px 0 0
+                font-size: 40px
+                font-weight: bold
+                font-family: "Roboto"
+            #addcrop
+                display: flex
+                align-items: center
+                gap: 20px
+                button
+                    align-self: flex-start
+                    border: 2px solid color.$primary
+                    font-size: 17px
+                    margin: 20px 0
+                    padding: 7px 20px
+                    transition: .2s
+                    border-radius: 40px
+                    &:hover
+                        box-shadow: 2px 2px 30px -5px #00000071
+            
+            #weather-wrapper
+                display: flex
+                flex-direction: column
+                img
+                    width: 100px
+                    margin: 10px 0
+                h3
+                    font-size: 25px
+                    margin: 10px 0
+                    span
+                        font-size: 20px
+            #crop-suggestion-wrapper,#crop-recommendation-wrapper
+                display: flex
+                flex-wrap: wrap
+                padding: 10px 0
+                .crop-suggestion
+                    padding: 10px 20px
+                    margin: 10px
+                    border: 2px solid color.$primary
+                    border-radius: 5px
+                    &:hover
+                        background: color.$primaryGrey
+        #right
+            display: flex
+            flex-direction: column
+            #crop-information-container
+                display: flex
+                flex-direction: column
+                row-gap: 20px
+                margin: 20px 0
+                padding: 5px
+                .crop-info
+                    border-radius: 15px
+                    width: 100%
+                    background: #f0f0f0
+                    display: flex
+                    flex-direction: column
+                    padding: 20px
+                    row-gap: 10px
+                    img
+                        width: 100px
+                    h2
+                        font-size: 23px
+                        font-weight: bold
+                        margin: 10px 0
+                    p
+                        align-self: flex-start
+                        font-size: 17px
+                        padding: 7px 20px
+                        border-radius: 40px
+                    .completed-task
+                        background: color.$primary
