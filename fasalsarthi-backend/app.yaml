@@ -1,0 +1,12 @@
+runtime: nodejs18
+
+env_variables:
+    PORT: 8080
+    ATLAS_URI: "mongodb+srv://fasalsarthi:zUZyAcnyAGiZtwFl@cluster0.yzaeltl.mongodb.net/fasalsarthi?retryWrites=true&w=majority"
+    TOKEN_SECRET: "&*%H7huj"
+    ACCESS_ID: "AKIAZTWJQEUIGFLAG7W2"
+    ACCESS_KEY: "/K7FbsLsJAx3/6JfFNKJSnfO0PMiiP34fjfzYsVw"
+    BUCKET_NAME: "fasalsarthi"
+    REGION: "ap-south-1"
+    MAIL_EMAIL: "contactnotebase@gmail.com"
+    MAIL_PASSWORD: "roscqvsupnpyefvo"
